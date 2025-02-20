@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  sql:
+    image: postgres:16.3
+    ports:
+      - 15500:5432
+    environment:
+      POSTGRES_USER: sangsu
+      POSTGRES_PASSWORD: sangsu
+      POSTGRES_DB: otdj
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - ~/otdj-pg:/var/lib/postgresql/data
+  redis:
+    image: redis/redis-stack-server:latest
+    ports:
+      - 16500:6379
+    volumes:
+      - ~/otdj-redis:/data
