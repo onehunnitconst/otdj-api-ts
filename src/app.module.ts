@@ -3,8 +3,8 @@ import { AuthenticationModule } from './authentication/authentication.module';
 import { JwtModule } from '@nestjs/jwt';
 import Constants from './constants';
 import { UsersModule } from './users/users.module';
-import { PrismaModule } from './authentication/modules/prisma/prisma.module';
-import { RedisModule } from './authentication/modules/redis/redis.module';
+import { PrismaModule } from './modules/prisma/prisma.module';
+import { RedisModule } from './modules/redis/redis.module';
 import { AppController } from './app.controller';
 
 @Module({
